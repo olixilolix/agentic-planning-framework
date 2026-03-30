@@ -28,21 +28,50 @@ It is designed for repos that want:
 - your business logic
 - your runtime stack decisions beyond templates
 
-## Suggested Use
+## Quick Start
 
-1. Copy this package into a new repo.
+1. Copy this package into a new or existing repo.
 2. Rename `AGENTS.template.md` to `AGENTS.md`.
-3. Fill in the files in `templates/` for the new project.
-4. Keep `docs/` as the reusable workflow and governance spine.
-5. Treat your new project-specific architecture docs as the authority for product behavior.
+3. Copy the files in `templates/` into the names your project will actually use, for example:
+   - `STACK.template.md` -> `STACK.md`
+   - `ARCHITECTURE.template.md` -> your architecture source-of-truth doc
+   - `ROADMAP.template.md` -> your roadmap doc
+   - `BACKLOG.template.md` -> your backlog doc
+4. Fill in the project-specific templates before asking agents to implement meaningful work.
+5. Keep `docs/` as the reusable workflow and governance spine.
+6. Treat your project-specific architecture docs as the authority for product behavior.
+
+## Best Fit
+
+This kit is especially useful for:
+
+- greenfield projects with significant architecture risk
+- repos that want strong human-in-the-loop agent governance
+- research or systems projects where planning quality matters
+- teams that want bounded tickets and explicit escalation rules
+
+## Included Docs
+
+For the reusable framework docs, start with:
+
+1. `docs/DEVELOPMENT_FRAMEWORK.md`
+2. `docs/DECISION_GATES.md`
+3. `docs/PRE_PHASE_QA_PROTOCOL.md`
+4. `docs/PHASE_CLOSE_CHECKLIST.md`
+5. `docs/TEST_CHARTER.md`
+6. `docs/AGENT_ALIGNMENT_RULE.md`
+
+There is also a lightweight index at `docs/README.md`.
 
 ## Included Files
 
 ```text
-framework-kit/
+agentic-planning-framework/
 ├── README.md
 ├── AGENTS.template.md
+├── .gitattributes
 ├── docs/
+│   ├── README.md
 │   ├── DEVELOPMENT_FRAMEWORK.md
 │   ├── DECISION_GATES.md
 │   ├── PRE_PHASE_QA_PROTOCOL.md
@@ -58,6 +87,12 @@ framework-kit/
     ├── ROADMAP.template.md
     └── BACKLOG.template.md
 ```
+
+## Adoption Rule
+
+Use this kit to structure work.
+
+Do not let the kit become a substitute for project-specific architecture.
 
 ## Working Rule
 

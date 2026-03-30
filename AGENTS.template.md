@@ -20,8 +20,9 @@ Before making changes, read these in order:
 6. the repo's roadmap
 7. the repo's backlog
 8. `docs/DECISION_GATES.md`
-9. `docs/PRE_PHASE_QA_PROTOCOL.md` when starting a new milestone or ticket cluster
-10. `docs/PHASE_CLOSE_CHECKLIST.md` before declaring meaningful work complete
+9. `docs/AGENT_ALIGNMENT_RULE.md`
+10. `docs/PRE_PHASE_QA_PROTOCOL.md` when starting a new milestone or ticket cluster
+11. `docs/PHASE_CLOSE_CHECKLIST.md` before declaring meaningful work complete
 
 ## Hard Rules
 
