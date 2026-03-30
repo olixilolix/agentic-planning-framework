@@ -66,7 +66,7 @@ There is also a lightweight index at `docs/README.md`.
 ## Included Files
 
 ```text
-agentic-planning-framework/
+project-root/
 ├── README.md
 ├── AGENTS.template.md
 ├── .gitattributes
