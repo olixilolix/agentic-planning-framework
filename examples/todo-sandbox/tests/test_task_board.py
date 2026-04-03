@@ -41,6 +41,13 @@ class TaskBoardTests(unittest.TestCase):
         self.assertEqual([task.id for task in board.list_tasks("open")], [first.id])
         self.assertEqual([task.id for task in board.list_tasks("completed")], [second.id])
 
+    def test_list_tasks_rejects_unsupported_status(self) -> None:
+        board = TaskBoard()
+        board.add_task("One item")
+
+        with self.assertRaisesRegex(ValueError, "Unsupported status"):
+            board.list_tasks("archived")
+
     def test_summary_counts_tasks_without_mutating_state(self) -> None:
         board = TaskBoard()
         first = board.add_task("Draft plan")

@@ -9,6 +9,9 @@ $requiredFiles = @(
   'docs/DEVELOPMENT_FRAMEWORK.md',
   'docs/DECISION_GATES.md',
   'docs/TEST_CHARTER.md',
+  'framework/README.md',
+  'framework/agent-policy.json',
+  'scripts/generate-agents-template.ps1',
   'templates/README.md',
   'templates/STACK.template.md',
   'templates/SYSTEM_BOUNDARIES.template.md',
@@ -23,6 +26,30 @@ foreach ($relativePath in $requiredFiles) {
   $resolvedPath = Join-Path $repoRoot $relativePath
   if (-not (Test-Path -LiteralPath $resolvedPath -PathType Leaf)) {
     $failures.Add("Missing required file: $relativePath")
+  }
+}
+
+$generatorScript = Join-Path $repoRoot 'scripts\generate-agents-template.ps1'
+try {
+  & $generatorScript -Check | Out-Null
+} catch {
+  $failures.Add($_.Exception.Message)
+}
+
+$backlogTemplatePath = Join-Path $repoRoot 'templates\BACKLOG.template.md'
+if (Test-Path -LiteralPath $backlogTemplatePath -PathType Leaf) {
+  $backlogTemplateContent = Get-Content -Raw -LiteralPath $backlogTemplatePath
+  $requiredBacklogFields = @(
+    'change class:',
+    'autonomy tier:',
+    'allowed evolution seams:',
+    'decision gate status:'
+  )
+
+  foreach ($field in $requiredBacklogFields) {
+    if ($backlogTemplateContent -notmatch [regex]::Escape($field)) {
+      $failures.Add("templates/BACKLOG.template.md is missing required governance field: $field")
+    }
   }
 }
 

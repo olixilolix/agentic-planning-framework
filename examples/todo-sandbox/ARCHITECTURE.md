@@ -47,6 +47,13 @@ The main risk this architecture controls is hidden complexity from adding storag
 - messaging or event boundaries: none
 - serialization or contract boundaries: `snapshot()` returns a stable list of dictionaries for future callers
 
+## Projection Contract
+
+- `summary()` returns counts for `all`, `open`, and `completed`
+- `snapshot()` returns task dictionaries in id order
+- each snapshot row contains `id`, `title`, and `completed`
+- callers may depend on that shape until the planning docs explicitly change it
+
 ## Testing Seams
 
 - pure units that should stay easy to test: title normalization, filtering, summary counts, snapshot projection

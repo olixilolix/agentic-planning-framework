@@ -1,4 +1,4 @@
-name: Docs Hygiene
+name: Framework Hygiene
 
 on:
   pull_request:
@@ -13,6 +13,6 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Validate required docs and local Markdown links
+      - name: Validate framework docs, links, and generated files
         shell: pwsh
         run: ./scripts/validate-docs.ps1

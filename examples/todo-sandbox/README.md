@@ -9,6 +9,7 @@ It uses the root-level framework docs in [../../docs/](../../docs/README.md) and
 Provide a deliberately small task-board domain so the framework can be exercised against:
 
 - a normal bounded implementation ticket
+- a bounded self-improvement seam with explicit limits
 - a gated request that should force escalation
 - an improvement proposal that should surface without silently rewriting the project
 

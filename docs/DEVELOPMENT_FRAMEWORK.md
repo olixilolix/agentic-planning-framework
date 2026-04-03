@@ -8,6 +8,7 @@ It defines:
 
 - how work moves from idea to implementation
 - how milestones should be framed and closed
+- how bounded self-improvement may be allowed without giving away architecture control
 - how improvement suggestions should be surfaced
 - how donor patterns and `AGENTS.md` stay subordinate to the planning trunk
 
@@ -23,6 +24,18 @@ The planning trunk for any project remains:
 - the stack and boundary docs
 
 This framework tells the repo how to operate work, not what product to build.
+
+## Autonomy Tiers
+
+Use the narrowest tier that can still get the work done:
+
+- `fixed-scope`: default mode. The agent implements the approved ticket only and may surface improvements, but does not self-apply them outside trivial implementation detail.
+- `bounded-self-improvement`: the ticket explicitly grants limited self-improvement within named seams such as tests, docs, internal refactors, or code generation. The agent may self-apply only within those seams, inside the declared write scope, without crossing a decision gate.
+- `gated`: the work touches architecture, policy, autonomy, privacy, trust, durable learning, or another protected boundary. The agent must stop for explicit approval before making the change.
+
+The point is not unlimited autonomy.
+
+The point is explicit, inspectable autonomy where it is safe enough to allow it.
 
 ## Canonical Flow
 
@@ -62,6 +75,7 @@ Before implementation broadens:
 Convert work into:
 
 - bounded tickets
+- structured ticket fields
 - explicit write scopes
 - clear acceptance criteria
 - explicit no-touch areas
@@ -107,6 +121,22 @@ Minimum deliverables before saying "phase complete":
 - explicit unresolveds
 - verification notes
 - clear next step
+
+## Structured Ticket Fields
+
+Every meaningful ticket should declare these fields explicitly:
+
+- `change class`: what kind of change this is, such as implementation detail, internal refactor, contract change, architecture change, or policy change
+- `autonomy tier`: `fixed-scope`, `bounded-self-improvement`, or `gated`
+- `allowed evolution seams`: the exact seams where limited self-improvement is allowed, or `none`
+- `decision gate status`: `none`, `required`, or `approved`
+
+Optional but useful:
+
+- gate owner or approver
+- evidence or rationale for why a bounded seam is safe
+
+If the ticket does not declare a bounded seam, assume there is none.
 
 ## Pre-Phase Questions
 
@@ -180,6 +210,14 @@ An improvement proposal should include:
 
 If a deferred issue keeps recurring, its priority should rise.
 
+Inside `bounded-self-improvement`, agents may self-apply a proposal only when:
+
+- the seam is declared explicitly in the ticket
+- the current write scope already covers the change
+- the change strengthens clarity, verification, or maintainability
+- the change does not weaken an existing guarantee
+- the change does not cross a decision gate
+
 ## Donor Adoption Rule
 
 Do not migrate wholesale into an external framework just because it sounds cleaner.
@@ -204,6 +242,18 @@ If `AGENTS.md` changes meaningfully, update the relevant planning docs too.
 If the planning docs change meaningfully, update `AGENTS.md` if the change affects agent behavior.
 
 If `AGENTS.md` and the planning trunk disagree, the planning trunk wins and the mismatch should be fixed explicitly.
+
+## Enforcement Hooks
+
+This kit is still lightweight, but it should not rely on memory alone.
+
+The default enforcement hooks are:
+
+- [../framework/agent-policy.json](../framework/agent-policy.json) is the machine-readable source for [../AGENTS.template.md](../AGENTS.template.md)
+- [../scripts/generate-agents-template.ps1](../scripts/generate-agents-template.ps1) regenerates the template instead of asking maintainers to sync it manually
+- [../scripts/validate-docs.ps1](../scripts/validate-docs.ps1) fails when the generated template drifts from the source or when the backlog template loses the structured governance fields
+
+This is not full automation, but it is stronger than prose-only alignment.
 
 ## Working Rule
 

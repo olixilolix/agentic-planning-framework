@@ -18,7 +18,7 @@ Use these files to define what your project actually is. The framework docs tell
 - [SYSTEM_BOUNDARIES.template.md](SYSTEM_BOUNDARIES.template.md): define scope, non-goals, and trust boundaries
 - [ARCHITECTURE.template.md](ARCHITECTURE.template.md): define modules, layers, runtime wiring, and testing seams
 - [ROADMAP.template.md](ROADMAP.template.md): sequence milestones by risk and proof
-- [BACKLOG.template.md](BACKLOG.template.md): break the next body of work into bounded tickets
+- [BACKLOG.template.md](BACKLOG.template.md): break the next body of work into bounded tickets with explicit autonomy and gate fields
 
 ## Working Rule
 

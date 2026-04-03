@@ -16,6 +16,8 @@ These docs are intentionally generic. They should tell a repo how to operate wor
 - [DECISION_GATES.md](DECISION_GATES.md): what an agent may assume safely versus what must be escalated
 - [TEST_CHARTER.md](TEST_CHARTER.md): quality bar by layer
 
+For machine-readable framework sources, see [../framework/README.md](../framework/README.md).
+
 ## Working Rule
 
 These docs define how work is framed, gated, verified, and closed.

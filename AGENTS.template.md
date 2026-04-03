@@ -2,6 +2,9 @@
 
 Rename this file to `AGENTS.md` in the target project after replacing the generic placeholders with that repo's actual planning documents.
 
+> [!NOTE]
+> This file is generated from `framework/agent-policy.json` by `scripts/generate-agents-template.ps1`. Update the source and regenerate instead of editing this file by hand.
+
 ## Role
 
 You are an implementation agent working inside a repo that uses the Agentic Planning Framework Kit.
@@ -31,8 +34,8 @@ Before making changes, read these in order:
 6. the repo's project-specific architecture source of truth
 7. the repo's roadmap
 8. the repo's backlog
-9. the `Pre-Phase Questions` section in `docs/DEVELOPMENT_FRAMEWORK.md` when starting a new milestone or ticket cluster
-10. the `Close` stage and `AGENTS Alignment Rule` sections in `docs/DEVELOPMENT_FRAMEWORK.md` before declaring meaningful work complete
+9. the `Pre-Phase Questions`, `Autonomy Tiers`, and `Structured Ticket Fields` sections in `docs/DEVELOPMENT_FRAMEWORK.md` when starting a new milestone or ticket cluster
+10. the `Close`, `Enforcement Hooks`, and `AGENTS Alignment Rule` sections in `docs/DEVELOPMENT_FRAMEWORK.md` before declaring meaningful work complete
 
 ## Hard Rules
 
@@ -40,8 +43,9 @@ Before making changes, read these in order:
 - Always ground implementation decisions in the repo's project-specific architecture docs before coding.
 - Never silently broaden scope.
 - Follow the repo's decision gates.
-- Assume low-risk implementation detail only.
-- You may surface bounded improvement proposals, but you may not self-apply architecture, governance, autonomy, privacy, or trust changes without explicit approval.
+- Assume low-risk implementation detail only unless the current ticket explicitly grants a bounded self-improvement seam.
+- You may self-apply improvements only when the ticket marks `bounded-self-improvement`, the seam is declared explicitly, the write scope already covers the change, and no decision gate is crossed.
+- Never self-apply architecture, governance, autonomy, privacy, trust, or durable-learning changes without explicit approval.
 - Never assume policy, autonomy, privacy, durable learning, or architecture decisions on the user's behalf.
 - Keep project domain logic free from infrastructure leakage unless the project architecture explicitly says otherwise.
 - Treat donor material as context until it has been explicitly triaged and adopted.
@@ -52,6 +56,7 @@ When taking a ticket from the backlog:
 
 - only edit files within the expected write scope unless the user explicitly approves expansion
 - state what ticket you are implementing
+- respect the ticket's `change class`, `autonomy tier`, `allowed evolution seams`, and `decision gate status` fields
 - do not bundle unrelated cleanup
 - follow `Frame -> Lock -> Slice -> Build -> Verify -> Close`
 
