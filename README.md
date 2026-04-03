@@ -9,6 +9,7 @@ This repository is for teams that want a project to have a clear planning trunk 
 - a reusable [AGENTS template](AGENTS.template.md) for project-local agent instructions
 - a framework doc set for planning, verification, escalation, and closeout in [docs/](docs/README.md)
 - starter project templates for stack, boundaries, architecture, roadmap, and backlog in [templates/](templates/README.md)
+- a practical sandbox in [examples/](examples/README.md) that pressure-tests the framework against a tiny real project
 - lightweight repo hygiene for publishing and maintenance, including a docs validation script and GitHub Actions workflow
 
 ## Best Fit
@@ -45,23 +46,18 @@ This repo does not supply:
 3. [docs/README.md](docs/README.md)
 4. [docs/DEVELOPMENT_FRAMEWORK.md](docs/DEVELOPMENT_FRAMEWORK.md)
 5. [docs/DECISION_GATES.md](docs/DECISION_GATES.md)
-6. [docs/PRE_PHASE_QA_PROTOCOL.md](docs/PRE_PHASE_QA_PROTOCOL.md)
-7. [docs/PHASE_CLOSE_CHECKLIST.md](docs/PHASE_CLOSE_CHECKLIST.md)
-8. Your project-local stack, architecture, roadmap, and backlog docs
+6. [docs/TEST_CHARTER.md](docs/TEST_CHARTER.md)
+7. Your project-local stack, architecture, roadmap, and backlog docs
 
 ## Repository Map
 
 - [AGENTS.template.md](AGENTS.template.md): starter agent instructions for a project using this kit
 - [docs/README.md](docs/README.md): index of the reusable framework docs
-- [docs/DEVELOPMENT_FRAMEWORK.md](docs/DEVELOPMENT_FRAMEWORK.md): canonical workflow model
+- [docs/DEVELOPMENT_FRAMEWORK.md](docs/DEVELOPMENT_FRAMEWORK.md): canonical workflow model plus pre-phase, closeout, donor, proposal, and alignment rules
 - [docs/DECISION_GATES.md](docs/DECISION_GATES.md): when an agent may assume details and when it must escalate
-- [docs/PRE_PHASE_QA_PROTOCOL.md](docs/PRE_PHASE_QA_PROTOCOL.md): questions to answer before a new milestone or ticket cluster
-- [docs/PHASE_CLOSE_CHECKLIST.md](docs/PHASE_CLOSE_CHECKLIST.md): closeout discipline before declaring work complete
 - [docs/TEST_CHARTER.md](docs/TEST_CHARTER.md): minimum quality expectations by layer
-- [docs/DONOR_TRIAGE_CHECKLIST.md](docs/DONOR_TRIAGE_CHECKLIST.md): donor-pattern adoption gate
-- [docs/AGENT_ALIGNMENT_RULE.md](docs/AGENT_ALIGNMENT_RULE.md): keeps `AGENTS.md` derived from the planning trunk
-- [docs/PHASE_OPERATING_PLAYBOOK.md](docs/PHASE_OPERATING_PLAYBOOK.md): phase-by-phase operating emphasis
 - [templates/README.md](templates/README.md): index of project-specific starter templates
+- [examples/README.md](examples/README.md): practical framework sandboxes and evaluation artifacts
 
 ## Core Operating Model
 

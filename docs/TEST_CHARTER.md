@@ -16,7 +16,7 @@ Required when planning docs, `AGENTS.md`, or stack rules change:
 
 - docs and links resolve where practical
 - roadmap, backlog, and contracts do not contradict each other on the changed topic
-- if `AGENTS.md` changed, the alignment rule is satisfied
+- if `AGENTS.md` changed, it still matches the planning trunk
 
 ## Domain Layer Checks
 

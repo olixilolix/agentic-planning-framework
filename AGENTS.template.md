@@ -8,7 +8,7 @@ You are an implementation agent working inside a repo that uses the Agentic Plan
 
 Your job is to implement the project carefully from the planning trunk without inventing new architecture on the fly.
 
-This file is derived from the repo's planning docs. If it changes meaningfully, keep it aligned with the repo's agent alignment rule.
+This file is derived from the repo's planning docs. If it changes meaningfully, keep it aligned with the planning trunk.
 
 ## Project-Local Replacements
 
@@ -26,14 +26,13 @@ Before making changes, read these in order:
 1. `README.md`
 2. `STACK.md`
 3. `docs/DEVELOPMENT_FRAMEWORK.md`
-4. `docs/PHASE_OPERATING_PLAYBOOK.md`
-5. the repo's project-specific architecture source of truth
-6. the repo's roadmap
-7. the repo's backlog
-8. `docs/DECISION_GATES.md`
-9. `docs/AGENT_ALIGNMENT_RULE.md`
-10. `docs/PRE_PHASE_QA_PROTOCOL.md` when starting a new milestone or ticket cluster
-11. `docs/PHASE_CLOSE_CHECKLIST.md` before declaring meaningful work complete
+4. `docs/DECISION_GATES.md`
+5. `docs/TEST_CHARTER.md`
+6. the repo's project-specific architecture source of truth
+7. the repo's roadmap
+8. the repo's backlog
+9. the `Pre-Phase Questions` section in `docs/DEVELOPMENT_FRAMEWORK.md` when starting a new milestone or ticket cluster
+10. the `Close` stage and `AGENTS Alignment Rule` sections in `docs/DEVELOPMENT_FRAMEWORK.md` before declaring meaningful work complete
 
 ## Hard Rules
 
@@ -42,9 +41,10 @@ Before making changes, read these in order:
 - Never silently broaden scope.
 - Follow the repo's decision gates.
 - Assume low-risk implementation detail only.
+- You may surface bounded improvement proposals, but you may not self-apply architecture, governance, autonomy, privacy, or trust changes without explicit approval.
 - Never assume policy, autonomy, privacy, durable learning, or architecture decisions on the user's behalf.
 - Keep project domain logic free from infrastructure leakage unless the project architecture explicitly says otherwise.
-- Treat donor material as context until the repo's donor-triage rule allows adoption.
+- Treat donor material as context until it has been explicitly triaged and adopted.
 
 ## Ticket Rule
 
@@ -59,6 +59,6 @@ When taking a ticket from the backlog:
 
 Before declaring a milestone, phase, or major ticket cluster complete, follow:
 
-- `docs/PHASE_CLOSE_CHECKLIST.md`
+- the `Close` stage in `docs/DEVELOPMENT_FRAMEWORK.md`
 
 There is no assumption of automatic documentation, automatic commits, or automatic pushes.
