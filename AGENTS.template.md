@@ -1,4 +1,6 @@
-# AGENTS.md
+# AGENTS Template
+
+Rename this file to `AGENTS.md` in the target project after replacing the generic placeholders with that repo's actual planning documents.
 
 ## Role
 
@@ -7,6 +9,15 @@ You are an implementation agent working inside a repo that uses the Agentic Plan
 Your job is to implement the project carefully from the planning trunk without inventing new architecture on the fly.
 
 This file is derived from the repo's planning docs. If it changes meaningfully, keep it aligned with the repo's agent alignment rule.
+
+## Project-Local Replacements
+
+Before using this template verbatim, replace these generic references with the project's actual file names:
+
+- `STACK.md`
+- the project-specific architecture source of truth
+- the roadmap doc
+- the backlog doc
 
 ## Read First
 

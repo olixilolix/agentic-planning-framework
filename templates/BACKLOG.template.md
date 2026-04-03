@@ -1,20 +1,28 @@
-# Backlog
+# Backlog Template
 
-## Purpose
+Copy this file into the target repo and turn the next implementation body into bounded tickets.
 
-This template defines the first bounded ticket set for a project.
+## Ticket Template
 
-## Fill In
+### TKT-001: Title
 
-For each ticket:
+- goal:
+- expected write scope:
+- no-touch areas:
+- acceptance criteria:
+- related docs:
+- likely tests:
+- gated decisions, if any:
 
-- ticket id
-- title
-- goal
-- expected write scope
-- no-touch areas
-- acceptance criteria
-- related docs
+### TKT-002: Title
+
+- goal:
+- expected write scope:
+- no-touch areas:
+- acceptance criteria:
+- related docs:
+- likely tests:
+- gated decisions, if any:
 
 ## Working Rule
 

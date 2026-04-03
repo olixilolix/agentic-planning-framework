@@ -1,18 +1,22 @@
-# Roadmap
+# Roadmap Template
 
-## Purpose
+Copy this file into the target repo and replace the prompts with the actual implementation sequence.
 
-This template defines milestones for the first implementation body.
+## Milestones
 
-## Fill In
+Use one row per milestone.
 
-For each milestone:
+| Milestone | What it proves | Main risk | Build now | Defer | Verification emphasis |
+| --- | --- | --- | --- | --- | --- |
+| M1 |  |  |  |  |  |
+| M2 |  |  |  |  |  |
+| M3 |  |  |  |  |  |
 
-- what it proves
-- what the main risk is
-- what should be built
-- what should stay deferred
-- what verification emphasis matters most
+## Notes
+
+- identify milestone dependencies:
+- identify likely decision gates:
+- identify cross-cutting docs that will change across milestones:
 
 ## Working Rule
 
